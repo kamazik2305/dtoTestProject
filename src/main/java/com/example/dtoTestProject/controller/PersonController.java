@@ -16,16 +16,10 @@ public class PersonController {
     //@Autowired
     private final PersonService personService;
 
-    @PostMapping("/persons")
+    @GetMapping("/persons")
     public List<PersonDto> getAllPersonsDto()
     {
         return  personService.findAllPersonsDto();
-    }
-
-    @GetMapping("/persons")
-    public List<PersonEntity> getAllPersons()
-    {
-        return personService.findPersonsEntity();
     }
 
     @GetMapping("/persons/{id_person}")
